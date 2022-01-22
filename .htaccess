@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule ^users$ users.php?type=users [NC,N,QSA]
+RewriteRule ^users/([0-9]+)/?$ users.php?id=$1&type=users [NC,L]
+RewriteRule ^users/login/?$ users.php [NC,L]
+RewriteRule ^post$ users.php [NC,N,QSA]
+RewriteRule ^post/([0-9]+)/?$ users.php?id=$1 [NC,L]
+RewriteRule ^feedback$ users.php?type=feedback [NC,N,QSA]
+RewriteRule ^feedback/([0-9]+)/?$ users.php?id=$1&type=feedback [NC,L]
+RewriteRule ^users/feedback/([0-9]+)/?$ users.php?type=feedback&userid=$1 [NC,L]
